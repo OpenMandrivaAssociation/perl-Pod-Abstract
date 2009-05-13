@@ -50,8 +50,8 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc Changes ._README README
+%{_mandir}/man1/*
 %{_mandir}/man3/*
 %perl_vendorlib/*
 /usr/bin/paf
-/usr/share/man/man1/paf.1
 
