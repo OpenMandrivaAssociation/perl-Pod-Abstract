@@ -1,22 +1,21 @@
+%define upstream_name    Pod-Abstract
+%define upstream_version 0.17
 
-%define realname   Pod-Abstract
-%define version    0.16
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    Basic multipart section numbering
-Source:     http://www.cpan.org/modules/by-module/Pod/%{realname}-%{version}.tar.gz
+
+Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 BuildRequires: perl-devel
 BuildRequires: perl(IO::String)
-
-
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 POD::Abstract provides a means to load a POD (or POD compatible) document
@@ -31,7 +30,7 @@ WHY?
     is intended to answer that question.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,7 +48,7 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%doc Changes ._README README
+%doc Changes README
 %{_mandir}/man1/*
 %{_mandir}/man3/*
 %perl_vendorlib/*
