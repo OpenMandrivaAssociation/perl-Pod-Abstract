@@ -54,3 +54,35 @@ rm -rf %buildroot
 %perl_vendorlib/*
 /usr/bin/paf
 
+
+
+%changelog
+* Sun Apr 17 2011 Funda Wang <fwang@mandriva.org> 0.200.0-2mdv2011.0
++ Revision: 654280
+- rebuild for updated spec-helper
+
+* Sun Jan 03 2010 Jérôme Quelin <jquelin@mandriva.org> 0.200.0-1mdv2011.0
++ Revision: 485806
+- update to 0.20
+
+* Sun Jul 12 2009 Jérôme Quelin <jquelin@mandriva.org> 0.190.0-1mdv2010.0
++ Revision: 395170
+- update to 0.19
+
+* Wed May 27 2009 Jérôme Quelin <jquelin@mandriva.org> 0.170.0-1mdv2010.0
++ Revision: 380217
+- fixed rpm version
+- update to 0.17
+- now using %%perl_convert_version
+- fixed wrong file in %%doc
+
+* Wed May 13 2009 Jérôme Quelin <jquelin@mandriva.org> 0.16-1mdv2010.0
++ Revision: 375445
+- change in packaged files
+- adding missing buildrequires
+- import perl-Pod-Abstract
+
+
+* Wed May 13 2009 cpan2dist 0.16-1mdv
+- initial mdv release, generated with cpan2dist
+
