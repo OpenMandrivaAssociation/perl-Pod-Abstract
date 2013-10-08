@@ -3,19 +3,18 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    3
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    Basic multipart section numbering
 
 Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
+Url:        http://search.cpan.org/dist/%{upstream_name}
 
 BuildRequires: perl-devel
 BuildRequires: perl(IO::String)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 POD::Abstract provides a means to load a POD (or POD compatible) document
@@ -40,14 +39,11 @@ WHY?
 make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{_mandir}/man1/*
 %{_mandir}/man3/*
