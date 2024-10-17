@@ -10,7 +10,7 @@ Group:      Development/Perl
 Summary:    Basic multipart section numbering
 
 Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 
 BuildRequires: perl-devel
 BuildRequires: perl(IO::String)
