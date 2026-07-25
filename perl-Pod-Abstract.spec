@@ -1,16 +1,16 @@
 %define upstream_name    Pod-Abstract
-%define upstream_version 0.20
+%define upstream_version 0.26
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    5
+Version:    %{upstream_version}
+Release:    1
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    Basic multipart section numbering
 
-Source0:    http://www.cpan.org/modules/by-module/Pod/%{upstream_name}-%{upstream_version}.tar.gz
-Url:        https://search.cpan.org/dist/%{upstream_name}
+Source0:    https://cpan.metacpan.org/authors/id/B/BL/BLILBURNE/Pod-Abstract-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/Pod-Abstract
 
 BuildRequires:	make
 BuildRequires: perl-devel
