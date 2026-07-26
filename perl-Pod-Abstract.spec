@@ -1,15 +1,13 @@
 %define upstream_name    Pod-Abstract
-%define upstream_version 0.26
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    0.26
+Release:    2
 
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    Basic multipart section numbering
 
-Source0:    https://cpan.metacpan.org/authors/id/B/BL/BLILBURNE/Pod-Abstract-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/B/BL/BLILBURNE/Pod-Abstract-%{version}.tar.gz
 Url:        https://metacpan.org/dist/Pod-Abstract
 
 BuildRequires:	make
@@ -30,7 +28,7 @@ WHY?
     is intended to answer that question.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -70,8 +68,7 @@ make test
 + Revision: 380217
 - fixed rpm version
 - update to 0.17
-- now using %%perl_convert_version
-- fixed wrong file in %%doc
+- now using %0.26 fixed wrong file in %%doc
 
 * Wed May 13 2009 Jérôme Quelin <jquelin@mandriva.org> 0.16-1mdv2010.0
 + Revision: 375445
